@@ -27,12 +27,12 @@ locals {
     t2_small  = "t2.small"
     t2_medium = "t2.medium"
   }
-  # instance_meta = {
-  #   ssh_user    = "ubuntu"
-  #   key_name    = "ServersKey"
-  #   private_key = file("~/.ssh/ServersKey.pem")
-  #   environment = var.environment
-  # }
+  instance_meta = {
+    # ssh_user    = "ubuntu"
+    # key_name    = "ServersKey"
+    # private_key = file("~/.ssh/ServersKey.pem")
+    environment = var.environment
+  }
   common_tags = {
     Owner       = "Valerii Vasianovych"
     ProjectID   = "Terraform Cloud"
