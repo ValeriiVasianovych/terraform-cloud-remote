@@ -31,18 +31,18 @@ resource "aws_instance" "web-server" {
   associate_public_ip_address = true
   user_data                   = file("install-nginx.sh")
 
-  provisioner "remote-exec" {
-    inline = [
-      "echo 'Hello, Terraform Cloud!'"
-    ]
+  # provisioner "remote-exec" {
+  #   inline = [
+  #     "echo 'Hello, Terraform Cloud!'"
+  #   ]
 
-    connection {
-      type        = "ssh"
-      user        = local.instance_meta.ssh_user
-      private_key = local.instance_meta.private_key
-      host        = self.public_ip
-    }
-  }
+  #   connection {
+  #     type        = "ssh"
+  #     user        = local.instance_meta.ssh_user
+  #     private_key = local.instance_meta.private_key
+  #     host        = self.public_ip
+  #   }
+  # }
 
   depends_on = [aws_security_group.webserver-sg]
 
