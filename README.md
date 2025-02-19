@@ -48,5 +48,9 @@ terraform apply -auto-approve
 terraform destroy -auto-approve
 ```
 
+### Terraform Cloud Workspace
+- **Demo Image**:
+![Terraform Cloud Workspace](img/demo.png)
+
 🚀 **Happy Terraforming!** 🚀
 
