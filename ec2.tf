@@ -24,7 +24,7 @@ resource "aws_eip" "webserver_eip" {}
 
 resource "aws_instance" "web-server" {
   ami                         = data.aws_ami.latest_ubuntu.id
-  instance_type               = local.instance_meta.environment == "Dev" ? local.instance_size.t2_micro : local.instance_size.t2_small
+  instance_type               = local.instance_meta.environment == "Dev" ? local.instance_size.micro : local.instance_size.small
   key_name                    = local.instance_meta.key_name
   vpc_security_group_ids      = [aws_security_group.webserver-sg.id]
   subnet_id                   = module.vpc.public_subnets[0]

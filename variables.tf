@@ -23,9 +23,8 @@ variable "private_subnets_cidrs" {
 
 locals {
   instance_size = {
-    t2_micro  = "t2.micro"
-    t2_small  = "t2.small"
-    t2_medium = "t2.medium"
+    micro  = "t2.micro"
+    small  = "t2.small"
   }
   instance_meta = {
     ssh_user    = "ubuntu"
