@@ -45,6 +45,7 @@ cat <<EOF > /var/www/html/index.html
         <h1>This is a WebServer on EC2</h1>
         <p>Current public iPv4: $PUBLIC_IP</p>
         <p>Current private iPv4: $PRIVATE_IP</p>
+        <p>Environment: ${env}</p>
     </div>
 </body>
 </html>

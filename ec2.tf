@@ -29,7 +29,10 @@ resource "aws_instance" "web-server" {
   vpc_security_group_ids      = [aws_security_group.webserver-sg.id]
   subnet_id                   = module.vpc.public_subnets[0]
   associate_public_ip_address = true
-  user_data                   = file("install-nginx.sh")
+  # Dynamic file 
+  user_data                   = templatefile("install-nginx.sh.tpl", {
+    env = "${var.environment}"
+  })
 
   # provisioner "remote-exec" {
   #   inline = [
