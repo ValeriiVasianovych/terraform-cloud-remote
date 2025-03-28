@@ -2,6 +2,17 @@
 
 Welcome to the **Terraform Cloud Demo Repository**! This repository demonstrates how to use **Terraform Cloud** to provision AWS infrastructure efficiently and securely.
 
+## Benefits of Terraform Cloud:
+- [x] Good for larger teams of Cloud Engineers  
+- [x] Remote execution of `terraform plan`, `apply`, and `destroy`  
+- [x] Integration with VCS  
+- [x] Remote state storage  
+- [x] Registry for Terraform Modules  
+- [x] Notifications via Slack, Email, Webhook  
+- [x] Different access levels for users (some deploy one thing, others another)  
+- [x] Sentinels – rules for infrastructure provisioning (paid feature)  
+- [x] Cost Estimation – allows approximate infrastructure cost evaluation  
+
 ## Overview
 This Terraform configuration deploys the following AWS resources:
 - **VPC** – A dedicated network for your infrastructure.
