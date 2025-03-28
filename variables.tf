@@ -23,12 +23,12 @@ variable "private_subnets_cidrs" {
 
 locals {
   instance_size = {
-    micro  = "t2.micro"
-    small  = "t2.small"
+    micro = "t2.micro"
+    small = "t2.small"
   }
   instance_meta = {
-    ssh_user    = "ubuntu"
-    key_name    = "ServersKey"
+    ssh_user = "ubuntu"
+    key_name = "ServersKey"
     # private_key = file("~/.ssh/ServersKey.pem")
     environment = var.environment
   }

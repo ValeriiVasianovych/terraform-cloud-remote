@@ -19,7 +19,7 @@ cat <<EOF > /var/www/html/index.html
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #2f74c0, #00bfb3);
+            background: linear-gradient(135deg, #51c02f, #bf8300);
             color: white;
             text-align: center;
             height: 100vh;

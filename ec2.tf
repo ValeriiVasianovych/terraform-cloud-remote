@@ -30,7 +30,7 @@ resource "aws_instance" "web-server" {
   subnet_id                   = module.vpc.public_subnets[0]
   associate_public_ip_address = true
   # Dynamic file 
-  user_data                   = templatefile("install-nginx.sh.tpl", {
+  user_data = templatefile("install-nginx.sh.tpl", {
     env = "${var.environment}"
   })
 
